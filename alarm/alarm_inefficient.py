@@ -1,4 +1,4 @@
-# Don't use it, as it's made for fun and learning python.
+# Not practical, as it's made for fun and learning python.
 # Only useful for 24 hours and date is not incorporated yet.
 
 import time # Imports time module
