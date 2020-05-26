@@ -31,13 +31,16 @@ while True:
 
         time_rem = t2-t1
 
-        if time_rem > 59:
+        if t2 > 3600:
+            h_rem = time_rem / 3600
+            m_rem = (time_rem - (int(h_rem) * 3600)) / 60
+            s_rem = time_rem - ((int(h_rem) * 3600 + int(m_rem) * 60))
+
+        elif time_rem > 59:
             m_rem = time_rem / 60
             s_rem = time_rem - (int(m_rem) * 60)
-            if m_rem > 59:
-                h_rem = 1+ ((m_rem - 60) / 60)
 
-        print(f"Time remaining: {(h_rem)}:{int(m_rem)}:{(s_rem)}")
+        print(f"Time remaining: {int(h_rem)}:{int(m_rem)}:{(s_rem)}")
         time.sleep(1)
 
     else:
